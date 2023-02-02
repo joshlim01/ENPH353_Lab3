@@ -203,7 +203,7 @@
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>robot/camera1</cameraName>
+        <cameraName>rrbot/camera1</cameraName>
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>camera_link</frameName>
@@ -217,7 +217,7 @@
     </sensor>
   </gazebo>
 
-<gazebo>
+  <gazebo>
   <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
     <updateRate>100.0</updateRate>
     <robotNamespace>/</robotNamespace>
@@ -225,13 +225,14 @@
     <rightFrontJoint>wheel_FR_joint</rightFrontJoint>
     <leftRearJoint>wheel_RL_joint</leftRearJoint>
     <rightRearJoint>wheel_RR_joint</rightRearJoint>
-    <wheelSeparation>0.4</wheelSeparation>
+    <wheelSeparation>0.15</wheelSeparation>
     <wheelDiameter>0.08</wheelDiameter>
-    <robotBaseFrame>base_link</robotBaseFrame>
+    <robotBaseFrame>chassis</robotBaseFrame>
     <torque>20</torque>
     <topicName>cmd_vel</topicName>
     <broadcastTF>false</broadcastTF>
   </plugin>
+
 </gazebo>
 
 </robot>
